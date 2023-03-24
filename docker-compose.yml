@@ -1,0 +1,14 @@
+version: '3'
+
+volumes:
+  gems:
+
+services:
+  fhir_client:
+    build:
+      context: .
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/var/fhir_client
+      - gems:/usr/local/bundle

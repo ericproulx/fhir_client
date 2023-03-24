@@ -218,6 +218,21 @@ else
 end
 ```
 
+### Docker
+This is the equivalent of `bundle exec rake fhir:console` but in Docker. 
+ - Ruby 3 latest
+ - Gems are installed in a docker volume
+ - Will try to update all gems all runs
+
+```
+docker-compose run --rm fhir_client
+```
+
+Add `--build` to rebuild the image on every run
+```
+docker-compose run --build --rm fhir_client
+```
+
 # License
 
 Copyright 2014-2022 The MITRE Corporation
